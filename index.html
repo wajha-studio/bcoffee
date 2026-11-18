@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>B Coffee Lounge | بي كوفي</title>
+<meta name="description" content="قهوة وحلويات وركن مدفأة دافئ في عمّان. المنيو كامل بالأسعار.">
+<meta property="og:title" content="B Coffee Lounge | بي كوفي">
+<meta property="og:description" content="قهوة وحلويات وركن مدفأة دافئ في عمّان. المنيو كامل بالأسعار.">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Dancing+Script:wght@600&family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light dark;--bg:#f4f6fb;--ink:#12214a;--card:#ffffff;--g:#1c3a8f;--acc:#b5651d;--line:rgba(18,33,74,.2);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1430;--ink:#e8ecf8;--card:#121d42;--g:#9db2ff;--acc:#ffb066;--line:rgba(232,236,248,.2)}}
+:root[data-theme="dark"]{--bg:#0b1430;--ink:#e8ecf8;--card:#121d42;--g:#9db2ff;--acc:#ffb066;--line:rgba(232,236,248,.2)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Cairo,Tahoma,sans-serif;line-height:1.75;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.p{font-family:'Playfair Display',Cairo,serif;font-weight:700}
+.hero{position:relative;background:linear-gradient(180deg,#0d2158 0,#16348a 70%,#1d3f9c);color:#fff;text-align:center;padding:84px 6% 90px;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:auto -20% -40% -20%;height:70%;background:radial-gradient(ellipse at 50% 100%,rgba(255,150,60,.65),rgba(255,110,30,.2) 45%,transparent 70%);animation:fl 3.2s ease-in-out infinite alternate}
+@keyframes fl{from{opacity:.65;transform:scale(.96)}to{opacity:1;transform:scale(1.05)}}
+.em{position:absolute;bottom:-8px;width:5px;height:5px;border-radius:50%;background:#ffb066;opacity:0;animation:up 6s infinite}
+@keyframes up{0%{opacity:0;transform:translateY(0)}20%{opacity:.9}100%{opacity:0;transform:translateY(-320px) translateX(18px)}}
+.hero>*:not(.em){position:relative;z-index:1}
+.B{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(8rem,38vw,13rem);line-height:.95;color:transparent;-webkit-text-stroke:2.5px #fff;position:relative;display:inline-block}
+.B:after{content:attr(data-t);position:absolute;inset:0;transform:translate(7px,5px);-webkit-text-stroke:1.2px rgba(255,255,255,.45)}
+.you{font-family:'Dancing Script',cursive;font-size:2.6rem;line-height:1;margin-top:-6px}
+.cl{letter-spacing:.35em;font-size:.9rem;margin-top:8px;padding-inline-start:.35em}
+.sub{opacity:.9;margin-top:10px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.btn{padding:12px 30px;font-weight:800;border-radius:40px;background:#fff;color:#12307a;border:2px solid #fff;display:inline-block;transition:transform .2s}
+.btn.o{background:transparent;color:#fff}.btn:active{transform:scale(.96)}
+.btn:focus-visible,.tabs button:focus-visible,a:focus-visible,.lang:focus-visible{outline:3px solid #ffb066;outline-offset:3px}
+.bd{display:inline-flex;align-items:center;gap:8px;margin-top:22px;background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.4);border-radius:30px;padding:4px 16px;font-size:.9rem}
+.dot{width:9px;height:9px;border-radius:50%;background:#aaa}.dot.on{background:#6fe08c;box-shadow:0 0 10px #6fe08c}
+.lang{position:absolute;top:14px;inset-inline-end:14px;z-index:2;font:inherit;font-weight:800;background:rgba(255,255,255,.15);color:#fff;border:1.5px solid #fff;border-radius:30px;padding:4px 16px;cursor:pointer}
+section{padding:56px 6%}
+.w{max-width:900px;margin:0 auto}
+h2{text-align:center;font-size:clamp(2rem,7vw,3rem);color:var(--g);line-height:1.3;margin-bottom:24px}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.feat div{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;border-top:4px solid var(--acc)}
+.feat h3{font-size:1.3rem;color:var(--g);margin-bottom:2px}.feat p{font-size:.95rem}
+#menu{background:var(--card)}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 16px;justify-content:safe center;scrollbar-width:none}
+.tabs button{flex:none;font:inherit;font-weight:700;padding:8px 22px;border-radius:30px;border:2px solid var(--g);background:transparent;color:var(--g);cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--g);color:var(--bg)}
+.cols{columns:2 320px;column-gap:44px}.grp{break-inside:avoid-column;margin-bottom:22px}
+.grp h3{font-size:1.4rem;color:var(--acc);border-bottom:2px solid var(--line);padding-bottom:2px;margin-bottom:4px}
+.it{display:flex;align-items:baseline;gap:8px;padding:5px 0;font-size:1.05rem}
+.it i{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px)}
+.it b{font-variant-numeric:tabular-nums;color:var(--g)}
+.note{text-align:center;font-size:.85rem;opacity:.7;margin-top:8px}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;text-align:center}
+.info div{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.info h3{font-size:1.25rem;color:var(--g)}.info .btn{margin-top:8px;background:var(--g);color:var(--bg);border-color:var(--g);padding:8px 22px}
+footer{background:#0d2158;color:#e8ecf8;text-align:center;padding:32px 6% 92px;font-size:.9rem}
+.bar{position:fixed;inset:auto 0 0 0;z-index:9;display:flex;background:#0d2158;border-top:2px solid #ffb066;padding-bottom:env(safe-area-inset-bottom,0px)}
+.bar a{flex:1;text-align:center;padding:13px 4px;font-weight:800;color:#fff}.bar a+a{border-inline-start:1px solid rgba(255,255,255,.25)}
+@media(min-width:760px){.bar{display:none}footer{padding-bottom:32px}}
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .7s,transform .7s}.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.hero:before,.em{animation:none}.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="hero">
+<button class="lang" id="lb" aria-label="Language">عربي</button>
+<i class="em" style="left:38%;animation-delay:0s"></i><i class="em" style="left:50%;animation-delay:2s"></i><i class="em" style="left:61%;animation-delay:4s"></i><i class="em" style="left:45%;animation-delay:3s"></i>
+<div class="B" data-t="B">B</div>
+<div class="you">B you</div>
+<div class="cl p">COFFEE LOUNGE</div>
+<p class="sub" data-en="Good vibes only" data-ar="Good vibes only">Good vibes only</p>
+<div class="cta"><a class="btn" href="#menu" data-en="View menu" data-ar="شوف المنيو">View menu</a><a class="btn o" href="tel:0799786667" data-en="Call" data-ar="اتصل">Call</a></div>
+<div class="bd"><span class="dot" id="dot"></span><span id="st"></span></div>
+</header>
+
+<section><div class="w rv"><h2 class="p" data-en="The B vibe" data-ar="أجواء بي">The B vibe</h2>
+<div class="feat">
+<div><h3 class="p" data-en="Fireplace corner" data-ar="ركن المدفأة">Fireplace corner</h3><p data-en="A warm seat by the fireplace, for long chats and slow coffee." data-ar="جلسة دافئة قرب المدفأة، لسوالف طويلة وقهوة على مهل."></p></div>
+<div><h3 class="p" data-en="Coffee & sweets" data-ar="قهوة وحلويات">Coffee &amp; sweets</h3><p data-en="Espresso, B Coffee, shaken drinks, cheesecake and sandwiches." data-ar="إسبريسو، B Coffee، مشروبات شيكن، تشيز كيك وساندويشات."></p></div>
+<div><h3 class="p" data-en="Find us" data-ar="وين نحن">Find us</h3><p data-en="On University Street, inside Al Basem Hotel, Amman." data-ar="بشارع الجامعة، داخل فندق الباسم، عمّان."></p></div>
+</div></div></section>
+
+<section id="menu"><div class="w rv"><h2 class="p" data-en="Menu" data-ar="المنيو">Menu</h2>
+<div class="tabs" id="tabs" role="tablist"></div>
+<div id="list" class="cols"></div>
+<p class="note" data-en="Prices in Jordanian dinars (JD)" data-ar="الأسعار بالدينار الأردني"></p></div></section>
+
+<section><div class="w rv"><h2 class="p" data-en="Visit us" data-ar="زورونا">Visit us</h2>
+<div class="info">
+<div><h3 class="p" data-en="Hours" data-ar="الدوام">Hours</h3><p data-en="8:00 AM – 12:00 AM<br>Closed on Fridays" data-ar="من 8 صباحاً لـ 12 منتصف الليل<br>مغلق أيام الجمعة"></p></div>
+<div><h3 class="p" data-en="Location" data-ar="الموقع">Location</h3><p data-en="Amman, inside Al Basem Hotel" data-ar="عمّان، داخل فندق الباسم"></p><a class="btn" href="https://www.google.com/maps/search/?api=1&query=B+Coffee+Lounge+Al+Basem+Hotel+Amman" target="_blank" rel="noopener" data-en="Map" data-ar="الخريطة">Map</a></div>
+<div><h3 class="p" data-en="Contact" data-ar="تواصل">Contact</h3><p dir="ltr">07 9978 6667</p><a class="btn" href="https://instagram.com/b_coffeelounge" target="_blank" rel="noopener">@b_coffeelounge</a></div>
+</div></div></section>
+
+<footer><b class="p" style="font-size:1.5rem">B Coffee Lounge</b><br><span style="opacity:.65" data-en="Concept design" data-ar="تصميم تجريبي">Concept design</span></footer>
+<div class="bar"><a href="tel:0799786667" data-en="Call" data-ar="اتصال">Call</a><a href="https://instagram.com/b_coffeelounge" data-en="Instagram" data-ar="انستغرام">Instagram</a><a href="#menu" data-en="Menu" data-ar="المنيو">Menu</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+const D={
+hot:{l:["Hot","ساخن"],g:[["Hot Drinks","مشروبات ساخنة",["Single Espresso|2.00","Double Espresso|2.50","Single Turkish|1.50","Double Turkish|2.00","Americano|3.00","Hot B Coffee|4.00","Latte|3.50","Cappuccino|3.50","Mocha|4.00","White Mocha|4.00","Spanish Latte|4.00","Caramel Macchiato|4.00","Salted Caramel|4.00","Cinnabon|4.00","Cortado|3.00","Hot Chocolate|3.00","Tea|2.50"]]]},
+cold:{l:["Cold","بارد"],g:[["Cold Coffee","قهوة باردة",["Ice B Coffee|4.00","Ice Americano|3.50","Ice Latte|4.00","Ice Mocha|4.00","Ice White Mocha|4.00","Ice Shaken White Mocha|4.00","Ice Spanish Latte|4.00","Ice Caramel Macchiato|4.00","Frappuccino|4.00"]],["Soda Drinks & Juices","مشروبات غازية وعصائر",["RedBull|3.00","Soda Water|2.00","Cotton Candy|3.00","Pomegranate|3.00","Ice Blue Shaken|3.50","Ice Tea|3.00","Orange Juice|3.50","Smoothies|4.00"]],["Additions","إضافات",["Extra Shot|0.50","Extra Flavor|0.50"]]]},
+sw:{l:["Sweet & Sandwich","حلويات وساندويش"],g:[["Cheesecake & Sweets","تشيز كيك وحلويات",["Blueberry|3.50","Strawberry|3.50","Dark Chocolate|3.50","Lotus|4.00","Muffin|2.50","Cookies|1.75","Cookies & Cream|2.50","Ice Cream|3.00"]],["Sandwich","ساندويش",["Turkey and Jalapeno|2.00","Turkey and Salami|2.00","Cheddar Mix|2.00","Halloumi|2.00"]]]}};
+let L='en',K='hot';const T=document.getElementById('tabs'),M=document.getElementById('list'),i=()=>L=='en'?0:1;
+function draw(){T.innerHTML='';Object.keys(D).forEach(k=>{const b=document.createElement('button');b.textContent=D[k].l[i()];b.role='tab';b.setAttribute('aria-selected',k===K);b.onclick=()=>{K=k;draw()};T.append(b)});
+M.innerHTML=D[K].g.map(g=>`<div class="grp"><h3 class="p">${g[i()]}</h3>${g[2].map(s=>{const[a,p]=s.split('|');return`<div class="it"><span>${a}</span><i></i><b>${p}</b></div>`}).join('')}</div>`).join('')}
+const S={o:["Open now · until 12 AM","مفتوحين الآن · لـ 12 منتصف الليل"],c:["Opens at 8 AM","نفتح 8 الصبح"],f:["Closed on Fridays","مغلق أيام الجمعة"]};let sk='c';
+try{const z={timeZone:'Asia/Amman'},d=new Intl.DateTimeFormat('en-US',{...z,weekday:'short'}).format(new Date()),h=+new Intl.DateTimeFormat('en-GB',{...z,hour:'numeric',hour12:false}).format(new Date())%24;sk=d=='Fri'?'f':h>=8?'o':'c'}catch(e){}
+function setL(l){L=l;const h=document.documentElement;h.lang=l;h.dir=l=='ar'?'rtl':'ltr';document.querySelectorAll('[data-en]').forEach(e=>e.innerHTML=e.dataset[l]);document.getElementById('lb').textContent=l=='en'?'عربي':'EN';document.getElementById('st').textContent=S[sk][i()];document.getElementById('dot').className='dot'+(sk=='o'?' on':'');draw()}
+document.getElementById('lb').onclick=()=>setL(L=='en'?'ar':'en');
+setL('en');
+const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.1});document.querySelectorAll('.rv').forEach(n=>io.observe(n));
+</script>
+</body>
+</html>
